@@ -7,20 +7,11 @@ atacca = {
 }
 
 mk = \new Voice {
-  \compressFullBarRests
-  \omit Rest
-  \omit MultiMeasureRest
-  \omit MultiMeasureRestNumber
-  \key bes \major
-  \tempo 4 = 120
-  R1*2 \bar "||" |
-  \key d \major
-  \mark \default
-  R1 |
-  r2 r^"rit." |
-  R1*2 |
-  \bar "|." |
-  \atacca
+  \key bes \major % 調号
+  \tempo 4 = 120 % テンポ記号
+
+  R1*6 | % 長休符*6
+  \bar "|." % 終止線
 }
 
 one = \new Voice \relative c' {
