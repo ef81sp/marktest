@@ -7,10 +7,9 @@ stfOne = \new Staff
     \one
   >>
 
-stfTwo = \new Staff
-  \transpose bes c' {
-    <<
-      \mk
-      \two
-    >>
-  }
+stfTwo = \new Staff \transpose bes c' {
+  <<
+    \mk
+    \two
+  >>
+}

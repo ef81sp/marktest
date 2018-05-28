@@ -1,16 +1,18 @@
 \version "2.18.2"
 
-atacca = {\stopStaff s_\markup {\right-align attacca.}}
+atacca = {
+  \stopStaff s_\markup {
+    \right-align attacca.
+  }
+}
 
-mk = \new Voice
-{
+mk = \new Voice {
   \compressFullBarRests
   \omit Rest
   \omit MultiMeasureRest
   \omit MultiMeasureRestNumber
   \key bes \major
   \tempo 4 = 120
-  \mark \default
   R1*2 \bar "||" |
   \key d \major
   \mark \default
