@@ -9,6 +9,8 @@ atacca = {
 mk = \new Voice {
   \compressFullBarRests % 連続する全休符を長休符にまとめる
 
+  \omit MultiMeasureRest % ★追記
+
   \key bes \major % 調号
   \tempo 4 = 120 % テンポ記号
 
