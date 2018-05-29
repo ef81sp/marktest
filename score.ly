@@ -3,9 +3,7 @@
 \include "staff.ly"
 
 % 総譜
-\new Score {
-  <<
-    \stfOne
-    \stfTwo
-  >>
-}
+\new Score <<
+  \stfOne
+  \stfTwo
+>>
