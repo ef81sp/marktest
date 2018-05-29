@@ -1,15 +1,15 @@
 \version "2.18.2"
-\include "voice.ly"
+\include "voice.ly" % voice.lyをinclude
 
 stfOne = \new Staff
   <<
-    \mk
-    \one
+    \mk % 記号用Voice
+    \one % パート1のVoice
   >>
 
 stfTwo = \new Staff \transpose bes c' {
   <<
-    \mk
-    \two
+    \mk % 記号用Voice
+    \two % パート2のVoice
   >>
 }
