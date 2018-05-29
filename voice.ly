@@ -1,30 +1,31 @@
 \version "2.18.2"
 
-atacca = {
-  \stopStaff s_\markup {
-    \right-align attacca.
-  }
-}
+% 記号用Voice
+mk = \new Voice
+  \compressFullBarRests % 長休符をまとめる
 
-mk = \new Voice {
-  \compressFullBarRests
-  \omit Rest
-  \omit MultiMeasureRest
-  \omit MultiMeasureRestNumber
+  \omit Rest % 通常の休符を消す
+  \omit MultiMeasureRest % 長休符の記号を消す
+  \omit MultiMeasureRestNumber % 長休符の長さを表す数字を消す
+
   \key bes \major
   \tempo 4 = 120
+
   R1*2 \bar "||" |
+
   \key d \major
   \mark \default
+
   R1 |
   r2 r^"rit." |
   R1*2 |
   \bar "|." |
-  \atacca
 }
 
+% パート1
 one = \new Voice \relative c' {
   \clef "treble"
+
   c2\ff d |
   e f |
   g a |
@@ -32,8 +33,10 @@ one = \new Voice \relative c' {
   b2 c |
 }
 
+% パート2
 two = \new Voice \relative c {
   \clef "bass"
+
   c2\mf\< d |
   e f |
   g\f a |
