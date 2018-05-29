@@ -7,7 +7,7 @@ stfOne = \new Staff
     \one % パート1のVoice
   >>
 
-stfTwo = \new Staff \transpose bes c' {
+stfTwo = \new Staff {
   <<
     \mk % 記号用Voice
     \two % パート2のVoice
