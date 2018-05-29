@@ -2,9 +2,7 @@
 \version "2.18.2"
 \include "staff.ly"
 
-\new Score {
-  <<
-    \stfOne
-    \stfTwo
-  >>
-}
+\new Score <<
+  \stfOne
+  \stfTwo
+>>
