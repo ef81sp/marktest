@@ -1,21 +1,20 @@
 \version "2.18.2"
 
-atacca = {
-  \stopStaff s_\markup {
-    \right-align attacca.
-  }
-}
-
 mk = \new Voice {
-  \compressFullBarRests % 連続する全休符を長休符にまとめる
+  \compressFullBarRests
 
-  \omit MultiMeasureRest % ★追記
+  \omit MultiMeasureRest
 
-  \key bes \major % 調号
-  \tempo 4 = 120 % テンポ記号
+  \key bes \major
+  \tempo 4 = 120
 
-  R1*6 | % 長休符*6
-  \bar "|." % 終止線
+  R1*2 \bar "||" | % 転調のための複縦線
+  \key d \major % 調号
+  \mark \default % リハーサルマーク
+  R1 |
+  r2 r^"rit." | % rit. 音符に付随するテキストは長休符NG
+  R1*2 |
+  \bar "|." | % 終止線
 }
 
 one = \new Voice \relative c' {
