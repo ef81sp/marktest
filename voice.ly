@@ -1,7 +1,7 @@
 \version "2.18.2"
 
 % 記号用Voice
-mk = \new Voice
+mk = \new Voice {
   \compressFullBarRests % 長休符をまとめる
 
   \omit Rest % 通常の休符を消す
@@ -19,7 +19,7 @@ mk = \new Voice
   R1 |
   r2 r^"rit." |
   R1*2 |
-  \bar "|." |
+  \bar "|." 
 }
 
 % パート1
