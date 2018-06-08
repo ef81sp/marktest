@@ -5,3 +5,8 @@
 *.log
 *~
 img/
+*.eps
+*.count
+*.tex
+*.texi
+*.png
