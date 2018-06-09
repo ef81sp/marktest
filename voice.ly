@@ -2,30 +2,23 @@
 
 % 記号用Voice
 mk = \new Voice {
-  % \compressFullBarRests % 長休符をまとめる
-
-  % \omit Rest % 通常の休符を消す
-  % \omit MultiMeasureRest % 長休符の記号を消す
-  % \omit MultiMeasureRestNumber % 長休符の長さを表す数字を消す
+  \compressFullBarRests % 長休符をまとめる
 
   \key bes \major
   \tempo 4 = 120
 
-  s1 |
-  s1 \bar "||" |
+  s1*2 | \bar "||" |
 
   \key d \major
   \mark \default
 
   s1 |
   s2 s^"rit." |
-  s1 |
-  s1 \bar "|."
+  s1*2 | \bar "|."
 }
 
 % パート1
 one = \new Voice \relative c' {
-  \compressFullBarRests % 長休符をまとめる
   \clef "treble"
 
   c2\ff d |
@@ -37,12 +30,11 @@ one = \new Voice \relative c' {
 
 % パート2
 two = \new Voice \relative c {
-  \compressFullBarRests % 長休符をまとめる
   \clef "bass"
 
   c2\mf\< d |
   e f |
-  g\f a |
+  g2\f a |
   b c |
   R1*2 |
 }
